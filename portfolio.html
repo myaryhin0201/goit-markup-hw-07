@@ -8,8 +8,7 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=fallback"
 		/>
-		<link rel="stylesheet" href="./css/normalize.css" />
-		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 	<body>
 		<!--Шапка-->
@@ -332,12 +331,14 @@
 					<form class="form-foot">
 						<label class="form-field">
 							<input
-								type="mail"
+								type="email"
 								class="form-inp"
 								name="user-mail"
 								autocomplete="on"
 								placeholder="E mail"
 							/>
+						</label>
+						<label class="form-field">
 							<button class="button" type="submit">
 								Подписаться
 								<svg class="icon-sub" width="24px" height="24px">
@@ -349,65 +350,5 @@
 				</div>
 			</div>
 		</footer>
-		<div class="backdrop is-hidden" data-modal>
-			<div class="modal">
-				<button class="button-close" data-modal-close>
-					<svg class="icon" width="11px" height="11px">
-						<use href="./images/icons/sprite.svg#icon-close-modal"></use>
-					</svg>
-				</button>
-
-				<form class="form js-speaker-form" autocomplete="off">
-					<h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
-
-					<label class="form-field">
-						<span class="form-label">Имя</span>
-						<input type="text" class="form-input" name="user-name" placeholder=" " />
-						<svg class="user-icon">
-							<use href="./images/icons/sprite.svg#icon-user-name"></use>
-						</svg>
-					</label>
-
-					<label class="form-field">
-						<span class="form-label">Телефон</span>
-						<input type="tel" class="form-input" name="user-phone" placeholder=" " />
-						<svg class="user-icon">
-							<use href="./images/icons/sprite.svg#icon-user-phone"></use>
-						</svg>
-					</label>
-
-					<label class="form-field">
-						<span class="form-label">Почта</span>
-						<input
-							type="mail"
-							class="form-input"
-							name="user-mail"
-							id="user-mail"
-							autocomplete="on"
-							placeholder=" "
-						/>
-						<svg class="user-icon">
-							<use href="./images/icons/sprite.svg#icon-user-mail"></use>
-						</svg>
-					</label>
-
-					<label class="form-field comment">
-						<span class="form-label">Комментарий</span>
-						<textarea name="user-comment" placeholder="Введите текст"></textarea>
-					</label>
-
-					<label class="form-field policy">
-						<input type="checkbox" name="policy" class="checkbox visually-hidden" />
-						<span class="check-icon"></span>
-						<span class="policy-label">
-							Соглашаюсь с рассылкой и принимаю<a href="#" class="policy-link current">
-								Условия договора
-							</a>
-						</span>
-					</label>
-					<button class="button" type="submit">Отправить</button>
-				</form>
-			</div>
-		</div>
 	</body>
 </html>
