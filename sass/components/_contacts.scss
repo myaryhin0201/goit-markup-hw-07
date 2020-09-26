@@ -1,0 +1,32 @@
+.contacts {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+.contacts__item:not(:last-child) {
+	margin-right: 50px;
+}
+.contacts__link {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	color: $second-text-color;
+	transition: color 0.25s $timing;
+	&:hover,
+	&:focus {
+		color: $lightblue-color;
+		transition: color 0.25s $timing;
+	}
+}
+.contacts__icon {
+	margin-right: 10px;
+	fill: $second-text-color;
+	transition: fill 0.25s $timing;
+	.contacts__link:hover &,
+	.contacts__link:focus & {
+		fill: $lightblue-color;
+		transition: fill 0.25s $timing;
+	}
+}

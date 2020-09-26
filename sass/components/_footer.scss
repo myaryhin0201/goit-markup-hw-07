@@ -1,0 +1,106 @@
+.footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: $back-color;
+	& .flexbox {
+		align-items: baseline;
+	}
+}
+.footer__logo {
+	@extend .logo;
+	display: block;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	padding-top: 0;
+	color: $white-color;
+}
+.firstpos {
+	min-width: 231px;
+	margin-right: 70px;
+	& .contacts {
+		display: block;
+	}
+}
+.contacts__address {
+	display: inline-block;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: $white-color;
+}
+.firstpos .contacts__item {
+	margin-right: 0;
+	margin-left: 0;
+	&:not(:last-child) {
+		margin-bottom: 9px;
+	}
+}
+.secondpos {
+	margin-right: 93px;
+}
+.footer__title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 0.88;
+	letter-spacing: 0.03em;
+	color: $white-color;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.footer__form {
+	display: flex;
+}
+.footer .form__field {
+	margin-bottom: 0;
+}
+.footer .form__input {
+	display: block;
+	outline: none;
+	margin: 0;
+	margin-right: 12px;
+	width: 358px;
+	height: 50px;
+	background-color: transparent;
+	padding: 15px 16px;
+	font-size: 16px;
+	color: $white-color;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+	transition: border-color 0.25s $timing;
+	&::placeholder {
+		font-size: 16px;
+		line-height: 1.25;
+		letter-spacing: 0.03em;
+		color: rgba(255, 255, 255, 0.6);
+	}
+	&:focus {
+		border-color: $white-color;
+		transition: border-color 0.25s $timing;
+	}
+}
+.footer__button {
+	@extend .button;
+	display: inline-flex;
+	align-items: center;
+	min-width: 200px;
+	padding: 10px 29px;
+	transition: background-color 0.25s $timing, color 0.25s $timing;
+	&:hover,
+	&:focus {
+		color: $lightblue-color;
+		background-color: $white-color;
+		transition: background-color 0.25s $timing, color 0.25s $timing;
+	}
+}
+.footer_icon {
+	margin-left: 10px;
+	fill: $white-color;
+	transition: fill 0.25s $timing;
+	.footer__button:hover &,
+	.footer__button:focus & {
+		fill: $lightblue-color;
+		transition: fill 0.25s $timing;
+	}
+}
