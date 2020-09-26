@@ -475,7 +475,7 @@ textarea {
 }
 .form-footer .form-inp::placeholder {
 	font-size: 16px;
-	line-height: 0.8;
+	line-height: 1.25;
 	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
 }
@@ -687,15 +687,6 @@ textarea {
 	background-color: var(--white-color);
 	transition: background-color 0.25s var(--timing);
 }
-/* .modal .button-close:hover,
-.modal .button-close:focus {
-	background-color: var(--lightblue-color);
-	transition: background-color 0.25s var(--timing);
-} */
-/* .modal .button-close .icon {
-	fill: black;
-	transition: fill 0.25s var(--timing);
-} */
 .modal .button-close:hover .icon,
 .modal .button-close:focus .icon {
 	fill: var(--lightblue-color);
