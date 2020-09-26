@@ -1,4 +1,5 @@
 .gallery {
+	@include flex();
 	flex-wrap: wrap;
 }
 .gallery__item {
