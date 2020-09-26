@@ -1,14 +1,15 @@
 .header {
 	background-color: $white-color;
 }
+.header__flexbox {
+	@include flex();
+}
 .nav {
-	align-items: center;
+	@include flex();
 }
 .nav__list {
-	display: flex;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
+	@include flex();
+	@include font(14px, 500, inherit, 0.02em, 1.14);
 }
 .nav__item:not(:last-child) {
 	margin-right: 50px;

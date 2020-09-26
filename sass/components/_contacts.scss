@@ -9,10 +9,7 @@
 .contacts__link {
 	display: flex;
 	align-items: center;
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	color: $second-text-color;
+	@include font(14px, 500, $second-text-color, 0.02em, 1.14);
 	transition: color 0.25s $timing;
 	&:hover,
 	&:focus {

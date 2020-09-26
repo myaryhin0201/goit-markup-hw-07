@@ -3,11 +3,7 @@
 	text-align: center;
 	padding: 10px 32px;
 	font-family: inherit;
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.86;
-	letter-spacing: 0.06em;
-	color: $white-color;
+	@include font(16px, 700, $white-color, 0.06em, 1.86);
 	cursor: pointer;
 	background-color: $lightblue-color;
 	border: none;

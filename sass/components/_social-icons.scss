@@ -1,5 +1,5 @@
 .social-icons {
-	justify-content: center;
+	@include flex();
 	margin-bottom: 30px;
 	.footer & {
 		margin-bottom: 0;
@@ -9,9 +9,7 @@
 	margin-right: 10px;
 }
 .social-icons__link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex();
 	width: 44px;
 	height: 44px;
 	background-color: $white-color;

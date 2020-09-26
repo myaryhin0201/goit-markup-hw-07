@@ -1,4 +1,5 @@
 .clients__list {
+	@include flex();
 	flex-wrap: wrap;
 }
 .clients__item {
@@ -13,9 +14,7 @@
 	}
 }
 .clients__link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex();
 	height: 90px;
 	width: 100%;
 	border: 1px solid $link-color;

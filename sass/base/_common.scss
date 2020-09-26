@@ -1,8 +1,6 @@
 body {
 	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	letter-spacing: 0.02em;
-	color: $main-text-color;
+	@include font(14px, 400, $main-text-color, 0.02em, 1.14);
 	background-color: $white-color;
 }
 img {
@@ -41,9 +39,6 @@ textarea {
 }
 .section__title {
 	margin-bottom: 50px;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
-	letter-spacing: 0.03em;
+	@include font(36px, 700, inherit, 0.03em, 1.17);
 	text-align: center;
 }
