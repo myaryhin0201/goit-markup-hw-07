@@ -44,7 +44,7 @@
 	text-transform: uppercase;
 }
 .footer__form {
-	display: flex;
+	@include flex();
 }
 .footer .form__field {
 	margin-bottom: 0;
@@ -59,41 +59,33 @@
 	background-color: transparent;
 	padding: 15px 16px;
 	@include font(16px, 400, $white-color, 0.03em, 1.25);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-radius: 4px;
-	transition: border-color 0.25s $timing;
+	@include bordered(1px, solid, rgba(255, 255, 255, 0.3), 4px);
+	@include trans(border-color, rgba(255, 255, 255, 0.3));
 	&::placeholder {
-		font-size: 16px;
-		line-height: 1.25;
-		letter-spacing: 0.03em;
-		color: rgba(255, 255, 255, 0.6);
+		@include font(16px, 400, rgba(255, 255, 255, 0.6), 0.03em, 1.25);
 	}
 	&:focus {
-		border-color: $white-color;
-		transition: border-color 0.25s $timing;
+		@include trans(border-color, $white-color);
 	}
 }
 .footer__button {
 	@extend .button;
-	display: inline-flex;
-	align-items: center;
+	@include flex(inline-flex);
 	min-width: 200px;
 	padding: 10px 29px;
-	transition: background-color 0.25s $timing, color 0.25s $timing;
+	@include trans(background-color, $lightblue-color);
+	@include trans(color, $white-color);
 	&:hover,
 	&:focus {
-		color: $lightblue-color;
-		background-color: $white-color;
-		transition: background-color 0.25s $timing, color 0.25s $timing;
+		@include trans(background-color, $white-color);
+		@include trans(color, $lightblue-color);
 	}
 }
 .footer_icon {
 	margin-left: 10px;
-	fill: $white-color;
-	transition: fill 0.25s $timing;
+	@include trans(fill, $white-color);
 	.footer__button:hover &,
 	.footer__button:focus & {
-		fill: $lightblue-color;
-		transition: fill 0.25s $timing;
+		@include trans(fill, $lightblue-color);
 	}
 }

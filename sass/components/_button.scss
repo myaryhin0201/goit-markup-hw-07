@@ -5,18 +5,15 @@
 	font-family: inherit;
 	@include font(16px, 700, $white-color, 0.06em, 1.86);
 	cursor: pointer;
-	background-color: $lightblue-color;
-	border: none;
-	border-color: transparent;
-	box-shadow: none;
-	border-radius: 4px;
-	transition: background-color 0.25s $timing, box-shadow 0.25s $timing, border-radius 0.25s $timing;
+	outline: none;
+	@include bordered(0px, none, transparent, 4px);
+	@include trans(background-color, $lightblue-color);
+	@include trans(box-shadow, none);
+	@include trans(border-radius, 4px);
 	.hero &:hover,
 	.hero &:focus {
-		border-radius: 0px;
-		background-color: #188ce8;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-		transition: background-color 0.25s $timing, box-shadow 0.25s $timing,
-			border-radius 0.25s $timing;
+		@include trans(background-color, $lightblue-color);
+		@include trans(box-shadow, (0px 4px 4px rgba(0, 0, 0, 0.15)));
+		@include trans(border-radius, 0px);
 	}
 }

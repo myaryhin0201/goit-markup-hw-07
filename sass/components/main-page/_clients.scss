@@ -17,21 +17,17 @@
 	@include flex();
 	height: 90px;
 	width: 100%;
-	border: 1px solid $link-color;
-	border-radius: 4px;
-	transition: border-color 0.25s $timing;
+	@include bordered(1px, solid, $link-color, 4px);
+	@include trans(border-color, $link-color);
 	&:hover,
 	&:focus {
-		border-color: $lightblue-color;
-		transition: border-color 0.25s $timing;
+		@include trans(border-color, $lightblue-color);
 	}
 }
 .clients__icon {
-	fill: $link-color;
-	transition: fill 0.25s $timing;
+	@include trans(fill, $link-color);
 	.clients__link:hover &,
 	.clients__link:focus & {
-		fill: $lightblue-color;
-		transition: fill 0.25s $timing;
+		@include trans(fill, $lightblue-color);
 	}
 }

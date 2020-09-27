@@ -12,29 +12,25 @@
 	@include flex();
 	width: 44px;
 	height: 44px;
-	background-color: $white-color;
 	border-radius: 50%;
-	transition: background-color 0.25s $timing;
+	@include trans(background-color, $white-color);
 	.footer & {
 		background: rgba(255, 255, 255, 0.1);
 	}
 	&:hover,
 	&:focus {
-		background-color: $lightblue-color;
-		transition: background-color 0.25s $timing;
+		@include trans(background-color, $lightblue-color);
 	}
 }
 .social-icons__icon {
 	width: 20px;
 	height: 20px;
-	fill: $link-color;
-	transition: fill 0.25s $timing;
+	@include trans(fill, $link-color);
 	.footer & {
-		fill: $white-color;
+		@include trans(fill, $white-color);
 	}
 	.social-icons__link:hover &,
 	.social-icons__link:focus & {
-		fill: $white-color;
-		transition: fill 0.25s $timing;
+		@include trans(fill, $white-color);
 	}
 }

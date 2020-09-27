@@ -12,3 +12,12 @@
 	justify-content: $justcont;
 	align-items: $ai;
 }
+
+@mixin bordered($sz, $type, $color, $br: 1px) {
+	border: $sz $type $color;
+	border-radius: $br;
+}
+@mixin trans($type, $prop: inherit, $time: 0.25s, $func: $timing) {
+	#{$type}: #{$prop};
+	transition: $type $time $func;
+}

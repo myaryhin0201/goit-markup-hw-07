@@ -47,23 +47,25 @@
 			<section class="section filt">
 				<div class="container">
 					<h1 class="section__title visually-hidden">Портфолио фирмы</h1>
-					<ul class="filter">
-						<li class="filter__item"><button type="button" class="filter__button">Все</button></li>
-						<li class="filter__item">
-							<button type="button" class="filter__button">Веб-сайты</button>
-						</li>
-						<li class="filter__item">
-							<button type="button" class="filter__button">Приложение</button>
-						</li>
-						<li class="filter__item">
-							<button type="button" class="filter__button">Дизайн</button>
-						</li>
-						<li class="filter__item">
-							<button type="button" class="filter__button">Маркетинг</button>
-						</li>
-					</ul>
+					<div class="filter" id="filter">
+						<button type="button" class="filter__button active" onclick="filterSelection('all')">
+							Все
+						</button>
+						<button type="button" class="filter__button" onclick="filterSelection('site')">
+							Веб-сайты
+						</button>
+						<button type="button" class="filter__button" onclick="filterSelection('app')">
+							Приложение
+						</button>
+						<button type="button" class="filter__button" onclick="filterSelection('design')">
+							Дизайн
+						</button>
+						<button type="button" class="filter__button" onclick="filterSelection('mark')">
+							Маркетинг
+						</button>
+					</div>
 					<ul class="gallery">
-						<li class="gallery__item">
+						<li class="gallery__item site">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img
@@ -85,7 +87,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item design">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img
@@ -107,7 +109,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item app">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img src="./images/portfolio/seafood.jpg" alt="Проект Еда моря" width="370" />
@@ -125,7 +127,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item mark">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img src="./images/portfolio/prime.jpg" alt="Проект простое число" width="370" />
@@ -143,7 +145,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item app">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img src="./images/portfolio/boxes.jpg" alt="Проект коробки" width="370" />
@@ -161,7 +163,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item site">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img
@@ -183,7 +185,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item design">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img
@@ -205,7 +207,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item mark">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img src="./images/portfolio/lab.jpg" alt="Проект Лаб" width="370" />
@@ -223,7 +225,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="gallery__item">
+						<li class="gallery__item app">
 							<a class="gallery__link" href="#">
 								<div class="gallery__thumb">
 									<img
@@ -352,5 +354,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="./js/filter.js"></script>
 	</body>
 </html>

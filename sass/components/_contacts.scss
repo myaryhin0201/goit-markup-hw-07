@@ -1,29 +1,24 @@
 .contacts {
-	display: flex;
-	align-items: center;
+	@include flex();
 	margin-left: auto;
 }
 .contacts__item:not(:last-child) {
 	margin-right: 50px;
 }
 .contacts__link {
-	display: flex;
-	align-items: center;
+	@include flex($justcont: start);
 	@include font(14px, 500, $second-text-color, 0.02em, 1.14);
-	transition: color 0.25s $timing;
+	@include trans(color, $second-text-color);
 	&:hover,
 	&:focus {
-		color: $lightblue-color;
-		transition: color 0.25s $timing;
+		@include trans(color, $lightblue-color);
 	}
 }
 .contacts__icon {
 	margin-right: 10px;
-	fill: $second-text-color;
-	transition: fill 0.25s $timing;
+	@include trans(fill, $second-text-color);
 	.contacts__link:hover &,
 	.contacts__link:focus & {
-		fill: $lightblue-color;
-		transition: fill 0.25s $timing;
+		@include trans(fill, $lightblue-color);
 	}
 }

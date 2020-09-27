@@ -1,11 +1,14 @@
 .gallery {
 	@include flex();
 	flex-wrap: wrap;
+	overflow: hidden;
 }
+
 .gallery__item {
 	width: calc((100% - 30px * 2) / 3);
 	margin-right: 30px;
 	margin-bottom: 30px;
+	display: none;
 	&:nth-child(3n) {
 		margin-right: 0;
 	}
@@ -13,21 +16,28 @@
 		margin-bottom: 0;
 	}
 }
+.show {
+	display: block;
+}
 .gallery__card-content {
 	padding: 20px 24px;
 	background: $white-color;
-	border: 1px solid #eeeeee;
+	@include bordered(1px, solid, #eeeeee, 0px);
 	border-top-style: none;
 }
 .gallery__link {
 	display: block;
-	box-shadow: none;
-	transition: box-shadow 0.25s $timing;
+	@include trans(box-shadow, none);
 	&:hover,
 	&:focus {
-		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-			0px 2px 2px rgba(0, 0, 0, 0.12);
-		transition: box-shadow 0.25s $timing;
+		@include trans(
+			box-shadow,
+			(
+				0px 3px 1px rgba(0, 0, 0, 0.1),
+				0px 1px 2px rgba(0, 0, 0, 0.08),
+				0px 2px 2px rgba(0, 0, 0, 0.12)
+			)
+		);
 	}
 }
 .gallery__thumb {
@@ -36,18 +46,17 @@
 }
 .gallery__overlay {
 	position: absolute;
-	display: flex;
+	@include flex();
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	padding: 63px 24px;
 	background-color: rgba(33, 150, 243, 0.9);
-	transform: translateY(100%);
-	transition: transform 0.25s $timing;
+	@include trans(transform, translateY(100%));
 	.gallery__link:hover &,
 	.gallery__link:focus & {
-		transform: translateY(0);
+		@include trans(transform, translateY(0));
 	}
 }
 .gallery__desc {
