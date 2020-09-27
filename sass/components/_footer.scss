@@ -15,26 +15,26 @@
 	padding-top: 0;
 	color: $white-color;
 }
-.firstpos {
+.footer__firstpos {
 	min-width: 231px;
 	margin-right: 70px;
 	& .contacts {
 		display: block;
 	}
 }
-.contacts__address {
+.footer__firstpos .contacts__address {
 	display: inline-block;
 	@include font(14px, 400, $white-color, 0.03em, 1.71);
 	font-style: inherit;
 }
-.firstpos .contacts__item {
+.footer__firstpos .contacts__item {
 	margin-right: 0;
 	margin-left: 0;
 	&:not(:last-child) {
 		margin-bottom: 9px;
 	}
 }
-.secondpos {
+.footer__secondpos {
 	@include flex();
 	margin-right: 93px;
 }

@@ -1,7 +1,3 @@
-.section.team {
-	background-color: $lightgray-color;
-	padding-top: 94px;
-}
 .team__list {
 	@include flex();
 	flex-wrap: wrap;

@@ -11,13 +11,6 @@ img {
 textarea {
 	resize: none;
 }
-.container {
-	width: 1200px;
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
 .link {
 	display: block;
 	padding-bottom: 32px;
@@ -29,13 +22,4 @@ textarea {
 }
 .current {
 	color: $lightblue-color;
-}
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
-.section__title {
-	margin-bottom: 50px;
-	@include font(36px, 700, inherit, 0.03em, 1.17);
-	text-align: center;
 }
