@@ -5,14 +5,12 @@
 	letter-spacing: $ls;
 	line-height: $lh;
 }
-
 @mixin flex($type: flex, $direction: row, $justcont: center, $ai: center) {
 	display: $type;
 	flex-direction: $direction;
 	justify-content: $justcont;
 	align-items: $ai;
 }
-
 @mixin bordered($sz, $type, $color, $br: 1px) {
 	border: $sz $type $color;
 	border-radius: $br;
@@ -21,3 +19,11 @@
 	#{$type}: #{$prop};
 	transition: $type $time $func;
 }
+// @mixin generateIcons($iconList) {
+// 	@each $iconName in $iconList {
+// 		$index: index($icons, $iconName);
+// 		&:nth-child(#{$index})::before {
+// 			background-image: url(../images/icons/#{$iconName}.svg);
+// 		}
+// 	}
+// }
